@@ -1,0 +1,11 @@
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.csprojResolveAssemblyReference.cache
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.csproj.CoreCompileInputs.cache
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.AssemblyInfoInputs.cache
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.AssemblyInfo.cs
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\bin\Debug\netcoreapp2.0\MenuAPI.deps.json
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\bin\Debug\netcoreapp2.0\MenuAPI.runtimeconfig.json
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\bin\Debug\netcoreapp2.0\MenuAPI.runtimeconfig.dev.json
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\bin\Debug\netcoreapp2.0\MenuAPI.dll
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\bin\Debug\netcoreapp2.0\MenuAPI.pdb
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.dll
+C:\Users\Morka\source\repos\MenuAPI\MenuAPI\obj\Debug\netcoreapp2.0\MenuAPI.pdb

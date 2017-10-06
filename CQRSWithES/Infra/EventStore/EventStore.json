@@ -1,0 +1,17 @@
+[
+  {
+    "body": {},
+    "Id": null,
+    "EventType": null,
+    "TimeStamp": "0001-01-01T00:00:00"
+  },
+  {
+    "body": {
+      "Name": "Jim",
+      "Email": "Jim@Email.com"
+    },
+    "Id": "IWasRandomlyGeneratedByTheClient",
+    "EventType": "ExampleEvent",
+    "TimeStamp": "2017-10-06T13:21:51.3700171-07:00"
+  }
+]
