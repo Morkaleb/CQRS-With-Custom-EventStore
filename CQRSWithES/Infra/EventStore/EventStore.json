@@ -1,1 +1,26 @@
-[ {} ]
+[
+  {
+    "body": {},
+    "Id": null,
+    "EventType": null,
+    "TimeStamp": "0001-01-01T00:00:00"
+  },
+  {
+    "body": {
+      "Name": "John",
+      "Email": "John@Email.com"
+    },
+    "Id": "IWasRandomlyGeneratedByTheClientAgain3",
+    "EventType": "ExampleEvent",
+    "TimeStamp": "2017-10-18T15:46:24.4317044-07:00"
+  },
+  {
+    "body": {
+      "Name": "John",
+      "Email": "John@Email.com"
+    },
+    "Id": "IWasRandomlyGeneratedByTheClientAgain2",
+    "EventType": "ExampleEvent",
+    "TimeStamp": "2017-10-18T15:46:30.5732871-07:00"
+  }
+]

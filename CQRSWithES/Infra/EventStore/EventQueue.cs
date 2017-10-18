@@ -1,6 +1,7 @@
 ﻿using CQRSWithES.Infra;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,6 +20,8 @@ namespace CQRSWITHES.Infra.EventStore
         {
             while(publishingQueue.Count> 0)
             {
+
+                Debug.WriteLine("event " + publishingQueue[0].EventType + " read");
                 EventDistributor.Publish(publishingQueue[0]);
                 publishingQueue.RemoveAt(0);
             }
