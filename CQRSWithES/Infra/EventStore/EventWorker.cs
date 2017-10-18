@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CQRSWITHES.Infra.EventStore;
+using System;
 using System.Linq;
 using System.Reflection;
 
@@ -12,7 +13,7 @@ namespace CQRSWithES.Infra.EventStore
             evt.TimeStamp = DateTime.Now;
             EventModel normalizedEvent = normalizeEvent(evt);
             EventStore.Store(normalizedEvent);
-            EventDistributor.Publish(normalizedEvent);
+            EventQueue.Queue(normalizedEvent);
         }
 
         private static EventModel normalizeEvent(Events evt)

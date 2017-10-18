@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CQRSWITHES.Infra.EventStore;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -12,8 +13,6 @@ namespace CQRSWithES.Infra.EventStore
 {
     public static class ReadSavedEvents
     {
-        static ReadSavedEvents() { }
-
         public static Dictionary<string, EventStream> EventDictionary = new Dictionary<string, EventStream>();
 
         public static Dictionary<string, EventStream> ReturnEventStream(string source)
@@ -42,6 +41,7 @@ namespace CQRSWithES.Infra.EventStore
                 newStream.events.Add(eventToFile);
                 EventDictionary.Add(eventToFile.Id, newStream);
             }
+            EventQueue.Queue(eventToFile);
         }
     }
    

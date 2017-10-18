@@ -18,22 +18,22 @@ namespace CQRSWithES.Infra
             EventDictionary.Streams = ReadSavedEvents.ReturnEventStream(file);
         }
 
-        private static void AddToDictionary(EventModel convert)
-        {
-            if (convert.Id != null)
-            {
-                if (EventDictionary.Streams.ContainsKey(convert.Id))
-                {
-                    EventDictionary.Streams[convert.Id].events.Add(convert);
-                }
-                else
-                {
-                    EventStream newStream = new EventStream();
-                    newStream.events.Add(convert);
-                    EventDictionary.Streams.Add(convert.Id, newStream);
-                }
-            }
-        }
+        //private static async void AddToDictionary(EventModel convert)
+        //{
+        //    if (convert.Id != null)
+        //    {
+        //        if (EventDictionary.Streams.ContainsKey(convert.Id))
+        //        {
+        //            EventDictionary.Streams[convert.Id].events.Add(convert);
+        //        }
+        //        else
+        //        {
+        //            EventStream newStream = new EventStream();
+        //            newStream.events.Add(convert);
+        //            EventDictionary.Streams.Add(convert.Id, newStream);
+        //        }
+        //    }
+        //}
     }
 
 }

@@ -3,6 +3,7 @@ using CQRSWithES.Infra;
 using CQRSWithES.Infra.ReadModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace CQRSWithES.src.ReadModels
     {
         public override void EventPublish( EventModel anEvent)
         {
+            Debug.WriteLine("event " + anEvent.EventType + " read");
             var readModelCollection = Book.book;
             switch (anEvent.EventType)
             {
