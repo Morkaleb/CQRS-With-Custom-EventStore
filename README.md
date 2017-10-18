@@ -3,7 +3,9 @@ An effort to build a working CQRS w/ event store onboard that stores DB as JSON
 
 This is a template for a CQRS Patterned API.  To use, simply add event, command models, build out the domain, fill out controllers and readmodels 
 and you'll have a fully operation API All of the boiler plate infastracture stuff is taken care of, as long as you are able to deploy to a server
-which can host a JSON File.  NOTE, there are stll some TODO's not finished.
+which can host a JSON File. <br/>
+NOTE, there are stll some TODO's not finished.</br>
+NOTE, version using Event Store to come </br?
 
 TODO <br/>
   //Force Synchronous writes to EVENTSTORE.Json <br/>
@@ -12,3 +14,4 @@ TODO <br/>
   
  Done <br/>
   //Synchronous Application of events from EVENTSTORE.json on start is now forced, events hit the readmodels in the right order. <br/>
+  //Readmodels are now automatically registered on startup. <br/>
