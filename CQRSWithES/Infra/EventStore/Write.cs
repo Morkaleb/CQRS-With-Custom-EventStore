@@ -9,14 +9,20 @@ namespace CQRSWithES.Infra.EventStore
 {
     public class Write
     {
+
+        static List<EventModel> EventQueue = new List<EventModel>();
+
         public static void WriteEventToFile(EventModel evt)
         {
-            string path = @"./Infra/EventStore/EventStore.Json";
-            var file = File.ReadAllText(path);
-            var list = JsonConvert.DeserializeObject<List<EventModel>>(file);
-            list.Add(evt);
-            var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
-            File.WriteAllText(path, convertedJson);
+            if(EventQueue.Count > 0)
+            {
+                EventQueue.Add(evt);
+            }           
+            while(EventQueue.Count > 0)
+            {
+                FileWriter(EventQueue[0]);
+                EventQueue.RemoveAt(0);
+            }
         }
 
         public static void WriteToEventStore(EventModel anEvent)
@@ -33,6 +39,20 @@ namespace CQRSWithES.Infra.EventStore
                 data.Add(anEvent.Id, newStream);
             }
             EventDictionary.Streams = data;
+        }
+
+        public static void FileWriter(EventModel evt)
+        {
+            Task task = new Task(() =>
+            {
+                string path = @"./Infra/EventStore/EventStore.Json";
+                var file = File.ReadAllText(path);
+                var list = JsonConvert.DeserializeObject<List<EventModel>>(file);
+                list.Add(evt);
+                var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+                File.WriteAllText(path, convertedJson);
+            });
+            task.RunSynchronously();
         }
     }
 }

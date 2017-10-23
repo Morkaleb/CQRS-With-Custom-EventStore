@@ -2,6 +2,7 @@
 using CQRSWithES.Infra;
 using CQRSWithES.src.domain;
 using CQRSWithES.src.commands;
+using System;
 
 namespace CQRSWithES.Controllers
 {
@@ -13,6 +14,7 @@ namespace CQRSWithES.Controllers
         [Route("api/[controller]/new")]
         public void Post([FromBody] ExampleCommand value)
         {
+            value.Id = Guid.NewGuid().ToString();
             Aggregate exampleDomain = new ExampleAggregate();
             CommandHandler.ActivateCommand(value, exampleDomain);
         }

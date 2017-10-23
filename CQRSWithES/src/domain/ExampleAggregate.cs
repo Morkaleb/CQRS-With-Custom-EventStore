@@ -5,6 +5,7 @@ using CQRSWITHES.src.events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CQRSWithES.src.domain
@@ -49,6 +50,7 @@ namespace CQRSWithES.src.domain
             if(cmd.Email == null) { throw new ArgumentException("Email", "Email is a required field"); }
             if (cmd.Name == null) { throw new ArgumentException("Name", "Name is a required field"); }
             // now we assign values to the event model that we created in ExampleEvent
+            Thread.Sleep(100);
             ExampleEvent exampleEvent = new ExampleEvent
             {
                 Id = cmd.Id,

@@ -22,5 +22,14 @@
     "Id": "IWasRandomlyGeneratedByTheClientAgain2",
     "EventType": "ExampleEvent",
     "TimeStamp": "2017-10-18T15:46:30.5732871-07:00"
+  },
+  {
+    "body": {
+      "Name": "John",
+      "Email": "John@Email.com"
+    },
+    "Id": "IWasRandomlyGeneratedByTheClientAgain5",
+    "EventType": "ExampleEvent",
+    "TimeStamp": "2017-10-19T18:22:05.1432458-07:00"
   }
 ]

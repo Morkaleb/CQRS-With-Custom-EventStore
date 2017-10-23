@@ -13124,11 +13124,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Morka\\source\\repos\\CQRSWEVENTStore\\CQRSWithEs\\CQRSWITHES.csproj",
+      "projectUniqueName": "C:\\Users\\Morka\\source\\repos\\CQRS-With-Custom-EventStore\\CQRSWithEs\\CQRSWITHES.csproj",
       "projectName": "CQRSWITHES",
-      "projectPath": "C:\\Users\\Morka\\source\\repos\\CQRSWEVENTStore\\CQRSWithEs\\CQRSWITHES.csproj",
+      "projectPath": "C:\\Users\\Morka\\source\\repos\\CQRS-With-Custom-EventStore\\CQRSWithEs\\CQRSWITHES.csproj",
       "packagesPath": "C:\\Users\\Morka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Morka\\source\\repos\\CQRSWEVENTStore\\CQRSWithEs\\obj\\",
+      "outputPath": "C:\\Users\\Morka\\source\\repos\\CQRS-With-Custom-EventStore\\CQRSWithEs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

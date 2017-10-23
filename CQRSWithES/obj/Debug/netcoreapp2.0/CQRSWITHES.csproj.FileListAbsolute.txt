@@ -20,3 +20,14 @@ C:\Users\Morka\source\repos\CQRSWEVENTStore\CQRSWithEs\obj\Debug\netcoreapp2.0\C
 C:\Users\Morka\source\repos\CQRSWEVENTStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.AssemblyInfo.cs
 C:\Users\Morka\source\repos\CQRSWEVENTStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.dll
 C:\Users\Morka\source\repos\CQRSWEVENTStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.pdb
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\bin\Debug\netcoreapp2.0\CQRSWITHES.deps.json
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\bin\Debug\netcoreapp2.0\CQRSWITHES.runtimeconfig.json
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\bin\Debug\netcoreapp2.0\CQRSWITHES.runtimeconfig.dev.json
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\bin\Debug\netcoreapp2.0\CQRSWITHES.dll
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\bin\Debug\netcoreapp2.0\CQRSWITHES.pdb
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.csprojResolveAssemblyReference.cache
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.csproj.CoreCompileInputs.cache
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.AssemblyInfoInputs.cache
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.AssemblyInfo.cs
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.dll
+C:\Users\Morka\source\repos\CQRS-With-Custom-EventStore\CQRSWithEs\obj\Debug\netcoreapp2.0\CQRSWITHES.pdb
