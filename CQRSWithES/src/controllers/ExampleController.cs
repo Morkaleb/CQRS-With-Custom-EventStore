@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using CQRSWithES.Infra;
-using CQRSWithES.src.domain;
-using CQRSWithES.src.commands;
+using CQRSWITHES.Infra;
+using CQRSWITHES.src.domain;
+using CQRSWITHES.src.commands;
 using System;
 
-namespace CQRSWithES.Controllers
+namespace CQRSWITHES.Controllers
 {
 
     public class ExampleController : Controller

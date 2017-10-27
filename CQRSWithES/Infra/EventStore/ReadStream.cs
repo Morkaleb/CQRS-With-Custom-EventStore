@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CQRSWithES.Infra.EventStore;
-using CQRSWithES.Infra;
+using CQRSWITHES.Infra.EventStore;
+using CQRSWITHES.Infra;
 
-namespace CQRSWithES.Infra
+namespace CQRSWITHES.Infra
 {
     public class ReadSaved
     {
         public static void SavedEventReader()
         {
-            string path = @"./infra/EventStore/EventStore.json";
+            string path = @"./EventStore.json";
             string file = File.ReadAllText(path);
             EventDictionary.Streams = ReadSavedEvents.ReturnEventStream(file);
         }

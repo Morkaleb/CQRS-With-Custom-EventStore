@@ -1,4 +1,4 @@
-﻿using CQRSWithES.Infra;
+﻿using CQRSWITHES.Infra;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,20 +13,13 @@ namespace CQRSWITHES.Infra.EventStore
 
         public static void Queue(EventModel theEvent)
         {
-            publishingQueue.Add(theEvent);   
-        }
-
-        public static void QueuePublisher()
-        {
-            while(publishingQueue.Count> 0)
+            publishingQueue.Add(theEvent);
+            while (publishingQueue.Count > 0)
             {
-
-                Debug.WriteLine("event " + publishingQueue[0].EventType + " read");
                 EventDistributor.Publish(publishingQueue[0]);
-                publishingQueue.RemoveAt(0);
+                if (publishingQueue.Count > 0) { publishingQueue.RemoveAt(0); }
             }
         }
-
         
     }
     

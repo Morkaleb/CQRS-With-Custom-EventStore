@@ -1,30 +1,17 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.Infra.EventStore
+namespace CQRSWITHES.Infra.EventStore
 {
     public class Write
     {
-
-        static List<EventModel> EventQueue = new List<EventModel>();
-
-        public static void WriteEventToFile(EventModel evt)
-        {
-            if(EventQueue.Count > 0)
-            {
-                EventQueue.Add(evt);
-            }           
-            while(EventQueue.Count > 0)
-            {
-                FileWriter(EventQueue[0]);
-                EventQueue.RemoveAt(0);
-            }
-        }
-
+       
         public static void WriteToEventStore(EventModel anEvent)
         {
             var data = EventDictionary.Streams;
@@ -43,16 +30,19 @@ namespace CQRSWithES.Infra.EventStore
 
         public static void FileWriter(EventModel evt)
         {
-            Task task = new Task(() =>
-            {
-                string path = @"./Infra/EventStore/EventStore.Json";
-                var file = File.ReadAllText(path);
-                var list = JsonConvert.DeserializeObject<List<EventModel>>(file);
-                list.Add(evt);
-                var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
-                File.WriteAllText(path, convertedJson);
-            });
-            task.RunSynchronously();
+                try
+                {
+                    string path = @"./EventStore.json";
+                    var file = File.ReadAllText(path);
+                    var list = JsonConvert.DeserializeObject<List<EventModel>>(file);
+                    list.Add(evt);
+                    var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+                    File.WriteAllText(path, convertedJson);
+                }
+                catch { 
+                    FileWriter(evt); 
+                    Console.Write("Line was busy");
+                    }
         }
     }
 }

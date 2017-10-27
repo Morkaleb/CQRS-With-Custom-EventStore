@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.Infra.ReadModels
+namespace CQRSWITHES.Infra.ReadModels
 {
     public abstract class ReadModel
     {

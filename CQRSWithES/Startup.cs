@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using CQRSWithES.Infra;
+using CQRSWITHES.Infra;
 
-namespace CQRSWithES
+namespace CQRSWITHES
 {
     public class Startup
     {

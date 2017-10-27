@@ -1,10 +1,10 @@
-﻿using CQRSWithES.Infra;
+﻿using CQRSWITHES.Infra;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.Infra
+namespace CQRSWITHES.Infra
 {
     public static class CommandHandler
     {

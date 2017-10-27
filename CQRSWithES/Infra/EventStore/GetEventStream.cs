@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.Infra.EventStore
+namespace CQRSWITHES.Infra.EventStore
 {
     public static class ReadSavedEvents
     {
@@ -33,7 +33,6 @@ namespace CQRSWithES.Infra.EventStore
             if (EventDictionary.ContainsKey(eventToFile.Id))
             {
                 EventDictionary[eventToFile.Id].events.Add(eventToFile);
-
             }
             else
             {

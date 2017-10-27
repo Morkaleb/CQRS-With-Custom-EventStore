@@ -1,7 +1,7 @@
-﻿using CQRSWithES.Infra;
-using CQRSWithES.Infra.ReadModels;
+﻿using CQRSWITHES.Infra;
+using CQRSWITHES.Infra.ReadModels;
 
-namespace CQRSWithES.src.ReadModels
+namespace CQRSWITHES.src.ReadModels
 {
     public class ExampleReadModel : ReadModel
     {

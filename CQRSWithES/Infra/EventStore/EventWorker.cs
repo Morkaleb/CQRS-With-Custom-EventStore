@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 
 
-namespace CQRSWithES.Infra.EventStore
+namespace CQRSWITHES.Infra.EventStore
 {
     public class EventWorker
     {

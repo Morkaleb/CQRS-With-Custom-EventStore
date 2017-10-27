@@ -1,6 +1,6 @@
-﻿using CQRSWithES.Infra;
-using CQRSWithES.Infra.EventStore;
-using CQRSWithES.src.commands;
+﻿using CQRSWITHES.Infra;
+using CQRSWITHES.Infra.EventStore;
+using CQRSWITHES.src.commands;
 using CQRSWITHES.src.events;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.src.domain
+namespace CQRSWITHES.src.domain
 {
     public class ExampleAggregate : Aggregate
     {

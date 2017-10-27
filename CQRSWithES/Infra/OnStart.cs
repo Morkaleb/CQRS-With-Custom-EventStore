@@ -1,13 +1,13 @@
 ﻿using CQRSWITHES.Infra.EventStore;
+using CQRSWITHES.Infra.EventStore;
 
-namespace CQRSWithES.Infra
+namespace CQRSWITHES.Infra
 {
-    public static class OnStart
+    public class OnStart
     {
          public static void Start()
          {
            ReadSaved.SavedEventReader();
-           EventQueue.QueuePublisher(); 
-         }        
+         }                
     }
 }

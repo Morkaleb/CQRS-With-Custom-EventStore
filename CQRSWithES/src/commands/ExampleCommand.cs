@@ -1,6 +1,6 @@
-﻿using CQRSWithES.Infra;
+﻿using CQRSWITHES.Infra;
 
-namespace CQRSWithES.src.commands
+namespace CQRSWITHES.src.commands
 {
     // All commands must inherit from CQRSWithES.Infra.Commands  This is required for Infra.CommandHandler
     // Domain/Aggregate 

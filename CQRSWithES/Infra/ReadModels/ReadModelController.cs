@@ -7,43 +7,42 @@ using System.Reflection;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace CQRSWithES.Infra.ReadModels
+namespace CQRSWITHES.Infra.ReadModels
 {
     [Route("r/")]
     public class ReadModelController : Controller
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/values/5
         [HttpGet("{key}")]
         [Route("/api/r/{key}")]
         public JsonResult Get(string key)
         {
             var blah = Book.book;
-            List < ReadModelData > returnable = Book.book[key];
-            if(Request.QueryString.HasValue) {
-                List<ReadModelData> filtered = new List<ReadModelData>();
-                string query = Request.QueryString.ToString().Split("?")[1];
-                string param = query.Split("=")[0];
-                string value = query.Split("=")[1];
-                foreach (ReadModelData data in returnable) {
-                    Type dataType = data.GetType();
-                    foreach (PropertyInfo propertyInfo in dataType.GetProperties())
+            if (Book.book.ContainsKey(key))
+            {
+                List<ReadModelData> returnable = Book.book[key];
+                if (Request.QueryString.HasValue)
+                {
+                    List<ReadModelData> filtered = new List<ReadModelData>();
+                    string query = Request.QueryString.ToString().Split("?")[1];
+                    string param = query.Split("=")[0];
+                    string value = query.Split("=")[1];
+                    foreach (ReadModelData data in returnable)
                     {
-                        var DataValue = getValues(data, propertyInfo.Name).ToString();
-                        if (propertyInfo.Name == param && DataValue == value)
+                        Type dataType = data.GetType();
+                        foreach (PropertyInfo propertyInfo in dataType.GetProperties())
                         {
-                            filtered.Add(data);
+                            var DataValue = getValues(data, propertyInfo.Name).ToString();
+                            if (propertyInfo.Name == param && DataValue == value)
+                            {
+                                filtered.Add(data);
+                            }
                         }
                     }
+                    return Json(filtered);
                 }
-                return Json(filtered);
-            } else { return Json(returnable); }
+                else { return Json(returnable); }
+            }
+            else { return Json(Book.book); }
         }
 
         // POST api/values

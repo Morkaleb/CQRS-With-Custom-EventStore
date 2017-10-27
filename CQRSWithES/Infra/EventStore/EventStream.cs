@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CQRSWithES.Infra
+namespace CQRSWITHES.Infra
 {
     public class EventStream
     {

@@ -1,4 +1,4 @@
-﻿using CQRSWithES.Infra;
+﻿using CQRSWITHES.Infra;
 
 namespace CQRSWITHES.src.events
 {

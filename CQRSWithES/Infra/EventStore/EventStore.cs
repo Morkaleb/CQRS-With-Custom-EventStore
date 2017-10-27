@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CQRSWithES.Infra.EventStore
+namespace CQRSWITHES.Infra.EventStore
 {
     public class EventStore
     {
         public static void Store(EventModel anEvent)
         {
-            Write.WriteEventToFile(anEvent);
+            Write.FileWriter(anEvent);
             Write.WriteToEventStore(anEvent);
         }        
     }
